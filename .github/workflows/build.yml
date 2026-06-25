@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Make gradlew executable
-        run: chmod +x android/gradlew
+      - name: Build APK
+        run: cd android && chmod +x gradlew && ./gradlew assembleRelease --no-daemon
 
       - name: Build APK
         run: cd android && ./gradlew assembleRelease --no-daemon
