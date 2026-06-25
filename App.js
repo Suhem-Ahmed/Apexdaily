@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'react-native';
 
 import DashboardScreen from './src/screens/DashboardScreen';
 import TimelineScreen from './src/screens/TimelineScreen';
@@ -149,7 +149,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <StatusBar style="dark" backgroundColor={Colors.bg} />
+      <StatusBar barStyle="dark-content" backgroundColor={Colors.bg} />
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           {/* Main tab layout */}
